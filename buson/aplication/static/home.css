@@ -1,0 +1,433 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #F0F0F0;
+    white-space: nowrap;
+}
+
+header {
+    width: 100%;
+}
+
+.background {
+    background-image: url('img/img_viagem.jpg');
+    width: 100%;
+    height: 70vh; /* A altura ocupa toda a janela de visualização */
+    background-size: 100% 100%; /* A largura é ajustada automaticamente, e a altura ocupa 100% */
+    background-repeat: no-repeat;
+}
+
+.preco{
+    display: block;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 17%;
+    right: 53%;
+    background-color: #F0F0F0;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+   
+}
+
+
+
+.preco1{
+    display: block;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 17%;
+    right: 16%;
+    background-color: #F0F0F0;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+    
+}
+
+.preco2{
+    display: block;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 17%;
+    right: 3%;
+    background-color: #F0F0F0;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+.preco3{
+    display: block;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 17%;
+    right: 28%;
+    background-color: #F0F0F0;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+    
+
+.preco4{
+    display: block;
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    top: 17%;
+    right: 41%;
+    background-color: #F0F0F0;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+   
+}
+
+
+#buson {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+    color: #f72585;
+    display: flex;
+    justify-items: baseline; 
+    font-size: 50px; /* Tamanho da fonte */
+    margin-top: 10px;
+    position: absolute;
+    padding-left: 10%; /* movendo 20% para a direita */
+    text-decoration: none;
+}
+
+.volta_home{
+    border: 1px solid red ;
+    position: absolute;
+    top: 70%;
+    right: 64%;
+}
+
+#entrar, #cadastro {
+    text-decoration: none;
+    padding: 10px 20px; /* Espaço interno do botão */
+    background-color: #f72585;
+    border-radius: 10px; /* Bordas arredondadas */
+    color: white; /* Cor do texto */
+    display: inline-block; /* Permite definir padding e tamanho */
+    font-size: 16px; /* Tamanho do texto */
+    border: 2px solid #ffffff; /* Adiciona uma borda */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    margin: 10px 0 20px 0; /* Espaçamento igual para todos os lados */
+    width: 50%; /* Define a largura de cada botão para 50% */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
+
+#entrar:hover, #cadastro:hover, .passagem a:hover img {
+    transform: scale(1.05);
+    background-color: #be0156;
+}
+
+#buson:hover, .passagem a:hover img {
+    transform: scale(1.10);
+}
+
+.opcoes {
+    top: 0;
+    right: 70px;
+    position: absolute;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-left: 10%;
+    display: flex;
+    gap: 10px; /* Adiciona espaçamento entre os links */
+    justify-content: space-between; /* Garante que os botões fiquem distribuídos uniformemente */
+    width: 27%; /* Faz com que o contêiner ocupe toda a largura disponível */
+}
+
+.boas_viadas {
+    top: 110%;
+    right: 30%;
+    position: absolute;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-left: 10%;
+    display: flex;
+    gap: 10px; /* Adiciona espaçamento entre os links */
+    justify-content: space-between; /* Garante que os botões fiquem distribuídos uniformemente */
+    width: 20%; /* Faz com que o contêiner ocupe toda a largura disponível */
+    color: #f72585;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+#boas_viadas{
+    top: 110%;
+    left:  370%;
+    position: absolute;
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-left: 10%;
+    display: flex;
+    gap: 10px; /* Adiciona espaçamento entre os links */
+    justify-content: space-between; /* Garante que os botões fiquem distribuídos uniformemente */
+    width: 45%; /* Faz com que o contêiner ocupe toda a largura disponível */
+    color: #f72585;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+.mensagem{
+   
+    display: grid;
+    justify-items: center;
+    color: #f72585;
+    font-size: 20px;
+    top: 70px;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+    
+}
+
+.rotas {
+    width: 405px;
+    height: 405px;
+    margin-left: 100px;
+    top: 67px;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+#txt_rota {
+    font-size: 20px;
+    color: gray;
+    margin: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+#local_sair {
+    margin: 20px;
+    width: 90%;
+    height: 40px;
+    border: 1px solid #000000;
+    border-radius: 30px;
+}
+
+.tipo_viajem {
+    display: flex;
+    margin: 11px;
+    gap: 25px;
+    font: optional;
+    margin-top: 10px;
+}
+
+#data_viajem {
+    border-radius: 30px;
+    border: 1px solid #000000;
+    position: absolute;
+    top: 70%;
+    left: 65%;
+    width: 100px;
+    height: 40px;
+}
+
+#Buscar_passagem {
+    position: absolute;
+    left: 30px;
+    margin-top: 135px;
+    margin-left: 10px;
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    color: #be0156;
+    border: 1px solid black;
+}
+
+.containe {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+  
+}
+
+.containe h1{
+    position: absolute;
+    top: 110%;
+    color: #242424;
+    font-size: 30px;
+    white-space: nowrap; /* Evita a quebra de linha */
+    padding: 2%;
+    padding-left: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+#sem_nome{
+    position: absolute;
+    top: 110%;
+    color: #242424;
+    font-size: 30px;
+    white-space: nowrap; /* Evita a quebra de linha */
+    padding: 0%;
+    padding-left: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+.passagem {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha quando necessário */
+    gap: 10px; /* Espaçamento entre as imagens */
+    justify-content: space-around; /* Distribui as imagens uniformemente */
+    width: 340vh; /* Ajuste a largura do contêiner conforme necessário */
+    height: 340vh;
+    padding: 20px; /* Espaçamento das bordas */
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura total dos elementos */
+    top: 130%;
+    position: absolute;
+    padding-left:190%;
+    
+}
+
+.passagem a {
+    display: block; /* Permite que o link envolva completamente a imagem */
+    width: calc(20% - 20px); /* Ajuste a largura do link, 25% menos o espaçamento */
+}
+
+.passagem a img {
+    width: 100%; /* A imagem ocupa toda a largura do link */
+    height: 300px; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    position: relative;
+   
+}
+
+#sauda{
+   color: #f72585;
+    position: absolute;
+    left: 90%;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+
+
+.nav {
+    
+    
+    display: flex;
+    margin-top: 10px;
+    position: absolute;
+    padding-left: 10%; /* movendo 20% para a direita */
+    top: 0%;
+    left: 65%;
+    
+    
+}
+
+.nav li a {
+    display: block; /* Torna o link ocupar todo o espaço do li */
+    width: 10px; /* Largura da imagem */
+    height: 50px; /* Altura da imagem */
+    text-align: center; /* Centraliza o texto verticalmente */
+    font-size: 0; /* Remove o espaço para o texto */
+    transition: transform 0.3s ease; /* Transição suave para o hover */
+    
+}
+
+
+ul.nav { 
+	margin:0; 
+	padding:0;
+	}
+	
+ul.nav li {
+	list-style:none;	
+	display:inline;
+    
+	}
+ul.nav li a {
+	
+    margin: 10px;
+    float:left;
+	width:6.0em;
+	font-size: 25px;
+	padding:0  0.2em 0.2em  0;
+
+}
+.nav img{
+    width: 50px;
+ 
+}
+
+.campo {
+    display: grid;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 400%;
+    background-color: #ffffff;
+    
+    grid-template-columns: repeat(4, 1fr); /* Cria 4 colunas iguais */
+    gap: 20px; /* Espaço entre as colunas e linhas */
+    justify-content: center; /* Centraliza o grid horizontalmente */
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column; /* Alinha os links verticalmente */
+   
+    width: 200px; /* Define a largura das divs */
+    padding: 10px; /* Adiciona espaço interno */
+    color: #605656;
+    background-color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+.conteudo a{
+   
+    text-decoration: none;
+    color: #2f2929;
+    padding: 5px 0; /* Adiciona padding acima e abaixo do texto do link */
+    border-radius: 4px; /* Arredonda os cantos da borda */
+    display: block; /* Faz com que o link ocupe toda a largura disponível */
+    margin-bottom: 5px; /* Espaçamento entre os links */
+    width: 43px;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* fonte */
+}
+
+#curitiba{
+    background-color: #ffffff;
+    color: #000000;
+    top: 210px;
+    position: absolute;
+    right: 50%;
+    width: 285px;
+    height: 300px;
+    
+
+}
+
+#curitiba {
+    list-style:none;	
+	display:inline;
+    margin: 0%;
+    
+}
+   
+   
+
+
+@media (max-width: 480px) {
+    #buson {
+        font-size: 1.5rem;
+        left: 2%;
+    }
+
+    .rotas {
+        width: 90%;
+        max-width: none;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .passagem a {
+        width: calc(100% - 20px);
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+        padding-left: 0;
+    }
+}

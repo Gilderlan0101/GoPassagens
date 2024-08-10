@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Pedidos</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='pedido.css')}}">
+</head>
+<body>
+    <div class="pedidos">
+        <form action="{{ url_for('order.order') }}" method="post" id="pedidoForm">
+            <h1>Meus Pedidos</h1>
+            <label for="numero">Código do pedido</label>
+            <input type="text" name="number" id="numero" placeholder="___ __ __ __">
+            {{pedido}}
+            <div class="options">
+                
+                <label>
+                    <input type="radio" name="tipo" value="email" id="emailOption">
+                    E-mail
+                    {% if 'pedido' in errors %}
+                    <p id="pedido" style="color: red;">{{ errors['pedido'] }}</p>
+                {% endif %}
+                </label>
+
+                <label>
+                    <input type="radio" name="tipo" value="documento" id="documentoOption">
+                    Documento
+                </label>
+            </div>
+
+            <div id="extraFieldContainer">
+                <!-- Extra field will be inserted here -->
+            </div>
+
+            <input type="submit" value="Acessar" class="btn" />
+        </form>
+    </div>
+    <div id="msg">
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <h1 id="msg">{{ message }}</h1>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+        </div>
+    <script src="{{url_for('static', filename='pedido.js')}}"></script>
+</body>
+</html>

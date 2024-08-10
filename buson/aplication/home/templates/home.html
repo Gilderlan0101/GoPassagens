@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoPassagens</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="background">
+            <a id="buson" href="{{ url_for('home.home') }}">GoPassagens</a>
+        </div>
+        
+        <div class="opcoes">
+            <!-- Se o usuario não estive logado, exiba os botão de login e cadastra -->
+            {% if layout is none %}
+                <a id="entrar" href="{{ url_for('login.login') }}">Entrar</a>
+                <a id="cadastro" href="{{ url_for('register.register') }}">Cadastre-se</a>
+            {% endif %}
+            <!-- Se o usuario estive logado, exiba o botão de sair -->
+            {% if layout %} 
+                <ul class="nav">
+                    <li><a href="{{ url_for('logout') }}"><img src="{{ url_for('static', filename='img/sair.png') }}" alt="Foto"></a></li>
+                </ul>
+            {% endif %}
+        </div>
+
+        <div class="rotas">
+            <form action="{{url_for('login.login')}}" method="get">
+                <h1 id="txt_rota">Compre sua passagem de ônibus</h1>
+                
+                <input type="search" id="local_sair" name="local_sair" placeholder="De onde você vai sair?" required>
+                <br>
+                <input type="search" id="local_sair" name="local_destino" placeholder="Para onde você vai?" required>
+
+                <div class="tipo_viajem">
+                    <p>Somente Ida</p>
+                    <input type="checkbox" value="somente ida" id="escolha"> 
+                    <p>Ida e Volta</p>
+                    <input type="checkbox" value="false" id="escolha"> 
+                    <input type="date" name="data_viajem" id="data_viajem" required>
+                    <button type="submit" id="Buscar_passagem" name="Buscar_passagem">Buscar passagem</button>
+                </div>
+
+                <div class="containe">
+                 
+                
+
+                    <div class="passagem">
+                        <a href="#"><img src="{{ url_for('static', filename='img/curitiba.jpeg') }}" alt="Curitiba"></a>
+                        <div class="preco">
+                            <p>Salvador para</p>
+                            <p>Curitiba</p>
+                             <P>Por: 120$</P>               
+                        
+                        </div>
+                        <a href="#"><img src="{{ url_for('static', filename='img/Brazil.jpeg') }}" alt="Brazil"></a>
+                        <div class="preco1">
+                            <p>Salvador para</p>
+                            <p>Curitiba</p>
+                             <P>Por: 120$</P>       
+                    </div>
+                        
+                        <a href="#"><img src="{{ url_for('static', filename='img/bahia.jpeg') }}" alt="Bahia"></a>
+                        <div class="preco2">
+                            <p>Salvador para</p>
+                            <p>Curitiba</p>
+                             <P>Por: 120$</P>       
+                    </div>
+                        <a href="#"><img src="{{ url_for('static', filename='img/ceara.jpeg') }}" alt="Ceará"></a>
+                        <div class="preco3">
+                            <p>Salvador para</p>
+                            <p>Curitiba</p>
+                             <P>Por: 120$</P>       
+                    </div>
+                        <a href="#"><img src="{{ url_for('static', filename='img/porto.jpeg') }}" alt="Porto"></a>
+                        <div class="preco4">
+                            <p>Salvador para</p>
+                            <p>Curitiba</p>
+                             <P>Por: 120$</P>       
+                    </div>
+                    </div>
+                </div>
+            </form>
+           
+ 
+            <div class="boas_viadas">
+                {% if user_name and msg%}
+                <p id="boas_viadas">{{msg}} {{user_name.title()}}</p>
+                {%else%}
+               <p>Ei! Dê uma olhada nas ofertas incríveis de passagens que preparamos para você!</p>
+                {%endif%}
+            </div>
+            
+        </div>
+        </div>
+    </header>
+    <footer>
+        <div class="campo">
+            <div class="conteudo">
+                <a href="{{url_for('account')}}">Conta</a>
+                <a href="{{url_for('login.login')}}">Login</a>
+                <a href="{{url_for('order.order')}}">Pedidos</a>
+                <a href="{{url_for('register.register')}}">Cadastre-se</a>
+                <a href="{{'pagina_erro'}}">Promoções</a>
+              
+            </div>
+            <div class="conteudo">
+                <a href="{{url_for('account')}}">Conta</a>
+                <a href="{{url_for('login.login')}}">Login</a>
+                <a href="{{url_for('register.register')}}">Cadastre-se</a>
+                <a href="{{'pagina_erro'}}">FAQ</a>
+            </div>
+            <div class="conteudo">
+                <a href="{{url_for('account')}}">Contato</a>
+              
+           
+                <a href="{{url_for('register.register')}}">Comprar Passagens</a>
+                <a href="{{'pagina_erro'}}">Blog</a>
+            </div>
+            <div class="conteudo">
+                <a href="{{url_for('account')}}">Guia de destino São paulo</a>
+               
+              
+                <a href="{{url_for('register.register')}}">Guia de destino Rio de janeiro</a>
+                <a href="{{'pagina_erro'}}">Giia de destino Morro de São paulo</a>
+                <div class="volta_home">
+                    <a id="buson" href="{{ url_for('home.home') }}">GoPassagens</a>
+                </div>
+            </div>
+           
+            
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

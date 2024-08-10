@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div class="paged">
+        <form action="{{ url_for('login.login') }}" method="post" class="formLogin">
+            <input type="email" name="email" placeholder="Digite seu e-mail" id="email" autofocus="true" required />
+            <input type="password" name="password" placeholder="Sua senha" id="senha" required />
+            <input type="submit" value="Acessar" class="btn" />
+        </form>
+        <a href="{{ url_for('register.register') }}" class="btn-cadastre">Cadastre-se</a>
+        <a href="{{ url_for('order.order') }}" id="order">Acessar com número do pedido</a>
+        <a href="{{ url_for('register.register') }}" id="Esqueci">Esqueci minha senha</a>
+    </div>
+
+    <!-- Mensagens Flash -->
+    <div id="msg">
+      
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <h1 id="msg">{{  message }}</h1>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+       
+    </div>
+
+    <script src="{{ url_for('static', filename='img/login.js') }}"></script>
+</body>
+</html>

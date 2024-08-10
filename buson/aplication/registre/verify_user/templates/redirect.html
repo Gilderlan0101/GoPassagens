@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificação</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='redirect.css')}}">
+</head>
+<body>
+    
+    <!-- Exibindo mensagens flash -->
+    
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+                <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        <script>
+            // Redirecionar para a página inicial após 5 segundos
+            setTimeout(function(){
+                window.location.href = "{{ url_for('home.home') }}";
+            }, 5000);
+        </script>
+    {% endif %}
+    {% endwith %}
+ 
+</body>
+</html>

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/tela_login.png"); /* Caminho relativo à pasta CSS */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+   
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+   
+  
+}
+
+#msg {
+    position: absolute;
+    top: 5%;
+    color: #ff0676;
+    right: 50%;
+    word-wrap: inherit;
+    font-size: 30px;
+    width: 100px;
+    white-space: nowrap;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    border-radius: 7px;
+    padding: 40px;
+    gap: 5px;
+}
+
+/* Resto dos estilos */
+
+
+.areaLogin img {
+    width: 420px;
+}
+
+
+
+.formLogin p {
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+#senha {
+    padding: 15px;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    width: 300px;
+    height: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+    border: none; /* Remove a borda */
+    background-color: transparent; /* Torna o fundo transparente */
+    color: #000; /* Define a cor do texto */
+}
+
+
+#email{
+    padding: 15px;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    width: 300px;
+    height: 10px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+    border: none; /* Remove a borda */
+    background-color: transparent; /* Torna o fundo transparente */
+    color: #000; /* Define a cor do texto */
+}
+
+
+
+
+#order {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #555;
+    transition: all linear 160ms;
+    
+    position: absolute;
+    top: 75%;
+    left: 71%;
+    
+}
+
+#Esqueci{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #555;
+    transition: all linear 160ms;
+    
+    position: absolute;
+    top: 70%;
+    left: 73%;
+    
+}
+
+.btn {
+    
+    background-color: #f72585;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none !important;
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin: 0 !important;
+    width: 210px;
+    height: 55px;
+    position: absolute;
+    top: 63%;
+    left: 54%;
+    border-radius: 1%;
+
+}
+a.btn-cadastre {
+    background-color: #f72585;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    display: inline-block; /* Permite definir largura e altura */
+    text-align: center; /* Centraliza o texto dentro do link */
+    line-height: 69px; /* Alinha o texto verticalmente */
+    width: 248px;
+    height: 69px;
+    border-radius: 1%;
+    transition: all linear 160ms;
+    cursor: pointer;
+    position: absolute;
+    top: 65%;
+    left: 5%;
+}
+
+a.btn-cadastre:hover {
+    background-color: #c61d70; /* Muda a cor ao passar o mouse, se desejado */
+}
+
+
+.btn:hover, .btn-cadastre:hover {
+    transform: scale(1.05);
+    background-color: #ff0676;
+
+}
+
+
+.error{
+    color:  red;
+    width: 300px;
+    height: 600px;
+    border:  1px solid red;
+}
+#cria_conta{
+    color: #480ca8;
+}
+
+#mostra_senha{
+    position: relative;
+    left: 90%;
+    top: -12%;
+    font-size: 20px;
+   
+}
+
+input{
+    padding: 0px, 50px, 0px, 20px;
+}
+
+.tela_login img{
+    position: absolute;
+    top: 10%;
+    width: 90%;
+}

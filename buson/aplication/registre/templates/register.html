@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <form action="{{ url_for('register.register') }}" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="name" placeholder="Seu nome" required>
+                <br><br>
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="phone" placeholder="(11) 0000-1111" required>
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                <br><br>
+                <label for="senha">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <br><br>
+                <button type="submit" id="enviar">Enviar</button>
+            </form>
+            
+            <div class="error">
+                {% if email_erro %}
+                    <p id="error"><strong>Erro:</strong> {{ email_erro }}</p>
+                {% endif %}
+                {% if msg %}
+                    <p id="error">{{ msg }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="foto">
+        <img src="{{ url_for('static', filename='img/tela_login.jpg') }}" alt="Imagem">
+    </div>
+</body>
+</html>

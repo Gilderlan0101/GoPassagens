@@ -1,0 +1,112 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Impede a rolagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #480ca8;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Ajuste para cobrir toda a tela */
+    z-index: -1;
+}
+
+.login {
+    width: 300px; /* Ajuste conforme necessário */
+    height: 100%; /* Ajuste conforme necessário */
+    text-align: center;
+    background-color: rgb(17, 15, 19);
+    padding: 20px;
+    color: aliceblue;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+    margin-right: 20px;
+   
+}
+
+.login label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.login input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #f72585;
+}
+
+#enviar {
+    width: 100%;
+    padding: 10px;
+    background-color: #f72585;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all linear 160ms;
+}
+
+#enviar:hover {
+    transform: scale(1.05);
+    background-color: #ff0676;
+}
+
+.foto {
+    margin-left: 20px;
+}
+
+.foto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+a {
+    color: inherit;
+}
+
+#cadastro {
+    position: relative;
+    top: 7px;
+}
+
+#error{
+    color: red;
+}
+
+
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .login {
+        width: 90%;
+        margin-right: 0;
+    }
+
+    .login input {
+        width: calc(100% - 20px);
+    }
+
+    #enviar {
+        width: 100%;
+    }
+}
